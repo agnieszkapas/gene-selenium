@@ -1,0 +1,39 @@
+1510228522489	geckodriver	INFO	Listening on 127.0.0.1:57763
+1510228523662	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox with args ["-marionette"]
+1510228524031	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1510228524462	Marionette	INFO	Enabled via --marionette
+1510228528815	Marionette	INFO	Listening on port 44467
+1510228528905	Marionette	WARN	TLS certificate errors will be ignored for this session
+1510228529035	Marionette	DEBUG	Register listener.js for window 2147483649
+1510228913931	geckodriver	INFO	Listening on 127.0.0.1:50581
+1510228915122	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox with args ["-marionette"]
+1510228915459	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1510228915970	Marionette	INFO	Enabled via --marionette
+1510228919665	Marionette	INFO	Listening on port 32773
+1510228919743	Marionette	WARN	TLS certificate errors will be ignored for this session
+1510228919958	Marionette	DEBUG	Register listener.js for window 2147483649
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 559: TypeError: this.tablesData[table] is undefined
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: recipe-client-addon-run
+*** UTM:SVC TimerManager:unregisterTimer - id: recipe-client-addon-run
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUpdateTimerManager.js, line 342: TypeError: invalid 'in' operand this._timers
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 676: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "ShieldRecipeClient: Cleaning up"
+*** UTM:SVC TimerManager:registerTimer - id: telemetry_modules_ping
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1510228963030	geckodriver	INFO	Listening on 127.0.0.1:41115
+1510228964183	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox with args ["-marionette"]
+1510228964567	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1510228965118	Marionette	INFO	Enabled via --marionette
+1510228969592	Marionette	INFO	Listening on port 40909
+1510228969724	Marionette	WARN	TLS certificate errors will be ignored for this session
+1510228969856	Marionette	DEBUG	Register listener.js for window 2147483649
+1510228975163	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1510229004760	geckodriver	INFO	Listening on 127.0.0.1:39181
+1510229005957	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox with args ["-marionette"]
+1510229006289	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1510229006776	Marionette	INFO	Enabled via --marionette
+1510229010370	Marionette	INFO	Listening on port 42285
+1510229010472	Marionette	WARN	TLS certificate errors will be ignored for this session
+1510229010661	Marionette	DEBUG	Register listener.js for window 2147483649
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
