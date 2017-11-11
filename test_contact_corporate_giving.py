@@ -7,12 +7,16 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re
+from selenium.webdriver.chrome.options import Options
 
 class ContactCorporateGiving(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Firefox()
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--window-size=1920,1080")
+        self.driver = webdriver.Chrome(executable_path='/usr/lib/selenium/chromedriver', chrome_options=chrome_options)
         #self.driver.implicitly_wait(30)
-        self.base_url = "https://gene-qa.gene.com/"
+        self.base_url = "https://gene.com/"
         self.verificationErrors = []
         self.accept_next_alert = True
     

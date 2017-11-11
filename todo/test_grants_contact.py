@@ -6,39 +6,37 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re
+from selenium.webdriver.chrome.options import Options
 
-class grants_contact(unittest.TestCase):
+class PassGrantsContact(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Firefox()
-        self.driver.implicitly_wait(30)
-        self.base_url = "https://www.gene.com/"
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--window-size=1920,1080")
+        self.driver = webdriver.Chrome(executable_path='/usr/lib/selenium/chromedriver', chrome_options=chrome_options)
+        #self.driver.implicitly_wait(30)
+        self.base_url = "https://gene-qa.gene.com/"
         self.verificationErrors = []
         self.accept_next_alert = True
     
-    def test_91120171(self):
+    def test_pass_grants_contact(self):
         driver = self.driver
-        driver.get(self.base_url + "/good/giving/grants/contact-us")
+        driver.get(self.base_url + "/")
+        driver.find_element_by_link_text("For Good").click()
+        driver.find_element_by_link_text("Giving").click()
+        driver.find_element_by_css_selector("div.block-basic > ul > li > a").click()
+        driver.find_element_by_xpath("//a[contains(text(),'Contact Us')]").click()
         driver.find_element_by_id("firstName").clear()
-        driver.find_element_by_id("firstName").send_keys("John")
-        driver.find_element_by_id("firstName").clear()
-        driver.find_element_by_id("firstName").send_keys("John")
+        driver.find_element_by_id("firstName").send_keys("aaa")
         driver.find_element_by_id("lastName").clear()
-        driver.find_element_by_id("lastName").send_keys("Smith")
-        driver.find_element_by_id("lastName").clear()
-        driver.find_element_by_id("lastName").send_keys("Smith")
+        driver.find_element_by_id("lastName").send_keys("sss")
         driver.find_element_by_id("emailAddress").clear()
-        driver.find_element_by_id("emailAddress").send_keys("mir-wass-d@gene.com")
-        driver.find_element_by_id("emailAddress").clear()
-        driver.find_element_by_id("emailAddress").send_keys("mir-wass-d@gene.com")
+        driver.find_element_by_id("emailAddress").send_keys("zofian@gmail.com")
         driver.find_element_by_id("phoneNumber").clear()
         driver.find_element_by_id("phoneNumber").send_keys("123456788")
-        driver.find_element_by_id("phoneNumber").clear()
-        driver.find_element_by_id("phoneNumber").send_keys("123456788")
+        driver.find_element_by_id("select2-requestType-container").click()
         driver.find_element_by_id("description").clear()
-        driver.find_element_by_id("description").send_keys("123")
-        driver.find_element_by_id("description").clear()
-        driver.find_element_by_id("description").send_keys("123")
-        driver.find_element_by_id("submit").click()
+        driver.find_element_by_id("description").send_keys("descr")
         driver.find_element_by_id("submit").click()
     
     def is_element_present(self, how, what):

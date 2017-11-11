@@ -6,34 +6,30 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re
+from selenium.webdriver.chrome.options import Options
 
-class PassGrantsContact(unittest.TestCase):
+class Scientists2(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Firefox()
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--window-size=1920,1080")
+        self.driver = webdriver.Chrome(executable_path='/usr/lib/selenium/chromedriver', chrome_options=chrome_options)
         #self.driver.implicitly_wait(30)
-        self.base_url = "https://www.gene.com/"
+        self.base_url = "https://gene.com/"
         self.verificationErrors = []
         self.accept_next_alert = True
     
-    def test_pass_grants_contact(self):
+    def test_scientists2(self):
         driver = self.driver
-        driver.get(self.base_url + "/")
-        driver.find_element_by_link_text("For Good").click()
-        driver.find_element_by_link_text("Giving").click()
-        driver.find_element_by_css_selector("div.block-basic > ul > li > a").click()
-        driver.find_element_by_xpath("//a[contains(text(),'Contact Us')]").click()
-        driver.find_element_by_id("firstName").clear()
-        driver.find_element_by_id("firstName").send_keys("aaa")
-        driver.find_element_by_id("lastName").clear()
-        driver.find_element_by_id("lastName").send_keys("sss")
-        driver.find_element_by_id("emailAddress").clear()
-        driver.find_element_by_id("emailAddress").send_keys("zofian@gmail.com")
-        driver.find_element_by_id("phoneNumber").clear()
-        driver.find_element_by_id("phoneNumber").send_keys("123456788")
-        driver.find_element_by_id("select2-requestType-container").click()
-        driver.find_element_by_id("description").clear()
-        driver.find_element_by_id("description").send_keys("descr")
-        driver.find_element_by_id("submit").click()
+        driver.get(self.base_url + "/scientists/our-scientists#all")
+        driver.find_element_by_xpath("//li[2]/button").click()
+        driver.find_element_by_xpath("//li[2]/button").click()
+        driver.find_element_by_xpath("//li[3]/button").click()
+        driver.find_element_by_xpath("//li[3]/button").click()
+        driver.find_element_by_xpath("//li[4]/button").click()
+        driver.find_element_by_xpath("//li[4]/button").click()
+        driver.find_element_by_css_selector("button.nav-tab-list__button").click()
+        driver.find_element_by_css_selector("button.nav-tab-list__button").click()
     
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)
