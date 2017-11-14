@@ -1,3 +1,4 @@
+# (c) by Agnieszka Pas 
 # gene-selenium
 
 # How to run:   
