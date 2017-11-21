@@ -8,7 +8,7 @@ from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re
 from selenium.webdriver.chrome.options import Options
 
-class Callmeback2(unittest.TestCase):
+class UntitledTestCase(unittest.TestCase):
     def setUp(self):
         chrome_options = Options()
         chrome_options.add_argument("--headless")
@@ -19,33 +19,13 @@ class Callmeback2(unittest.TestCase):
         self.verificationErrors = []
         self.accept_next_alert = True
     
-    def test_callmeback2(self):
+    def test_untitled_test_case(self):
         driver = self.driver
-        driver.get(self.base_url + "/medical-professionals/medinfo/call-me-back")
-        driver.find_element_by_id("firstName").clear()
-        driver.find_element_by_id("firstName").send_keys("John")
-        driver.find_element_by_id("firstName").clear()
-        driver.find_element_by_id("firstName").send_keys("John")
-        driver.find_element_by_id("lastName").clear()
-        driver.find_element_by_id("lastName").send_keys("Smith")
-        driver.find_element_by_id("lastName").clear()
-        driver.find_element_by_id("lastName").send_keys("Smith")
-        driver.find_element_by_id("phone").clear()
-        driver.find_element_by_id("phone").send_keys("800000000")
-        driver.find_element_by_id("phone").clear()
-        driver.find_element_by_id("phone").send_keys("800000000")
-        driver.find_element_by_id("preferredDate").click()
-        driver.find_element_by_id("preferredDate").clear()
-        driver.find_element_by_id("preferredDate").send_keys("123")
-        driver.find_element_by_id("preferredDate").clear()
-        driver.find_element_by_id("preferredDate").send_keys("123")
-        driver.find_element_by_xpath("//div[10]").click()
-        driver.find_element_by_id("subjectTopic").clear()
-        driver.find_element_by_id("subjectTopic").send_keys("123")
-        driver.find_element_by_id("subjectTopic").clear()
-        driver.find_element_by_id("subjectTopic").send_keys("123")
-        driver.find_element_by_id("submit").click()
-        driver.find_element_by_id("submit").click()
+        driver.get("https://www.gene.com/scientists/publications?searchterms=treatment")
+        driver.find_element_by_id("job-search-text").clear()
+        driver.find_element_by_id("job-search-text").send_keys("treatment")
+        driver.find_element_by_xpath("//button[@type='submit']").click()
+        self.assertEqual("PUBLICATIONS", driver.find_element_by_xpath("//h1").text)
     
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)
