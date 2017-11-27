@@ -8,7 +8,7 @@ from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re
 from selenium.webdriver.chrome.options import Options
 
-class PassJobsearchLogin(unittest.TestCase):
+class UntitledTestCase(unittest.TestCase):
     def setUp(self):
         chrome_options = Options()
         chrome_options.add_argument("--headless")
@@ -19,21 +19,15 @@ class PassJobsearchLogin(unittest.TestCase):
         self.verificationErrors = []
         self.accept_next_alert = True
     
-    def test_pass_jobsearch_login(self):
+    def test_untitled_test_case(self):
         driver = self.driver
-        driver.get(self.base_url + "/")
-        driver.find_element_by_link_text("Now Hiring").click()
-        driver.find_element_by_link_text("Find A Job").click()
-        driver.find_element_by_link_text("My Jobs").click()
-        driver.find_element_by_id("dialogTemplate-dialogForm-login-name1").clear()
-        driver.find_element_by_id("dialogTemplate-dialogForm-login-name1").send_keys("Aga123")
-        driver.find_element_by_id("dialogTemplate-dialogForm-login-password").clear()
-        driver.find_element_by_id("dialogTemplate-dialogForm-login-password").send_keys("testujemy")
-        driver.find_element_by_id("dialogTemplate-dialogForm-login-password").clear()       
-	driver.find_element_by_id("dialogTemplate-dialogForm-login-password").send_keys("testujemy2017")
-        driver.find_element_by_id("dialogTemplate-dialogForm-login-defaultCmd").click()
-        driver.find_element_by_id("editTemplateMultipart-editForm-content-ftf-flowHeader-logoutAction").click()
-        driver.find_element_by_css_selector("svg.header__logo").click()
+        driver.find_element_by_xpath("(//input[@type='search'])[2]").clear()
+        driver.find_element_by_xpath("(//input[@type='search'])[2]").send_keys("Actemra")
+        driver.find_element_by_name("search_string").clear()
+        driver.find_element_by_name("search_string").send_keys("medicine cancer")
+        driver.find_element_by_xpath("//button[@type='submit']").click()
+        self.assertEqual("Search Results", driver.find_element_by_xpath("//div[3]/div/h1").text)
+        # ERROR: Caught exception [unknown command []]
     
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)

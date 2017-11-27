@@ -19,13 +19,18 @@ class UntitledTestCase(unittest.TestCase):
         self.verificationErrors = []
         self.accept_next_alert = True
     
-    def test_untitled_test_case(self, genentech=None):
+    def test_untitled_test_case(self):
         driver = self.driver
-        driver.get("https://www.gene.com/scientists/publications")
-        driver.find_element_by_id("job-search-text").clear()
-        driver.find_element_by_id("job-search-text").send_keys("genentech")
-        driver.find_element_by_xpath("//button[@type='submit']").click()
-        #self.assertEqual("https://www.gene.com/scientists/publications?searchterms=genentech", driver.find_element_by_id(self, )
+        driver.get("https://www.gene.com/medical-professionals/pipeline")
+        driver.find_element_by_xpath("//div[3]/ul/li").click()
+        driver.find_element_by_xpath("//div[3]/ul/li[4]").click()
+        driver.find_element_by_xpath("//div[3]/ul/li[7]").click()
+        driver.find_element_by_xpath("//div[3]/ul/li[2]").click()
+        driver.find_element_by_xpath("//div[3]/ul/li[5]").click()
+        driver.find_element_by_xpath("//div[3]/ul/li[3]").click()
+        driver.find_element_by_xpath("//div[3]/ul/li[6]").click()
+        driver.find_element_by_xpath("//li[8]").click()
+        self.assertEqual("45", driver.find_element_by_xpath("//p/span").text)
     
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)
