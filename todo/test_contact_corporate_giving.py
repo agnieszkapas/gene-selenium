@@ -22,7 +22,7 @@ class ContactCorporateGiving(unittest.TestCase):
     
     def test_contact_corporate_giving(self):
         driver = self.driver
-        driver.get(self.base_url + "/good/giving/grants/contact-us")
+        driver.get(self.base_url + "/good/giving/corporate-giving/contact-us")
         driver.find_element_by_id("firstName").clear()
         driver.find_element_by_id("firstName").send_keys("John")
         driver.find_element_by_id("firstName").clear()
