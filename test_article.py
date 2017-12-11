@@ -22,8 +22,8 @@ class UntitledTestCase(unittest.TestCase):
     def test_untitled_test_case(self):
         driver = self.driver
         driver.get("https://www.gene.com/media/press-releases")
-        driver.find_element_by_xpath("//a[contains(text(),'FDA Approves Zelboraf (Vemurafenib) for  Erdheim-Chester Disease with BRAF V600 Mutation')]").click()
-        self.assertEqual("FDA Approves Zelboraf (Vemurafenib) for Erdheim-Chester Disease with BRAF V600 Mutation", driver.find_element_by_xpath("//div[2]/h2").text)
+        driver.find_element_by_xpath("//a[contains(text(),'Phase II Data Showed Genentech’s Investigational Polatuzumab Vedotin Plus Bendamustine and Rituxan (BR) Increased Complete Response Rates Compared to BR Alone in Previously Treated Aggressive Lymphoma')]").click()
+        self.assertEqual("Phase II Data Showed Genentech’s Investigational Polatuzumab Vedotin Plus Bendamustine and Rituxan (BR) Increased Complete Response Rates Compared to BR Alone in Previously Treated Aggressive Lymphoma", driver.find_element_by_xpath("//div[2]/h2").text)
     
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)
